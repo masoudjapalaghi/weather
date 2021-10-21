@@ -1,0 +1,91 @@
+
+/* @font-face  */
+@font-face {
+	font-family: 'BYekan';
+	src: url(/assets/fonts/BYekan+.eot);
+	src: url(/assets/fonts/BYekan+.eot) format('embedded-opentype'),
+		 url(/assets/fonts/BYekan+.woff) format('woff'),
+		 url(/assets/fonts/BYekan+.woff2) format('woff2'),
+		 url(/assets/fonts/BYekan+.ttf) format('truetype'),
+		 url(/assets/fonts/BYekan+.svg) format('svg'),
+		 url(/assets/fonts/BYekan+.otf) format('otf');
+  }
+  
+  /* @font-face  */
+
+[ REBOOT ]*/
+*, *:before, *:after {
+	margin: 0px; 
+	padding: 0px; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body, html {
+	font-family: 'BYekan';
+	font-size: 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*---------------------------------------------*/
+a{
+	text-decoration: none;
+}
+a:focus {outline: none;}
+a:hover {text-decoration: none;}
+
+/*---------------------------------------------*/
+h1,h2,h3,h4,h5,h6,p {margin: 0px;}
+
+ul, li {
+	margin: 0px;
+	list-style-type: none;
+}
+
+
+/*---------------------------------------------*/
+input, textarea, label {
+	display: block;
+	outline: none;
+	border: none;
+}
+
+/*---------------------------------------------*/
+button {
+	outline: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+button:focus {outline: none;}
+
+iframe {border: none;}
+
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+	width: 4px; 
+ }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 5px grey; */
+	border-radius: 50px;
+	background-color: transparent;
+	margin-right: 5px!important;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: gray;
+	border-radius: 50px;
+	
+  }
+  
+  
