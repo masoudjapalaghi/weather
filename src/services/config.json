@@ -1,5 +1,5 @@
 
 {
     "openWeather":"https://api.openweathermap.org/data/2.5",
-    "localTime":"https://api.keybit.ir/owghat"
+    "localTime":"https://api.ipgeolocation.io/astronomy"
 }
