@@ -1,0 +1,118 @@
+
+.loading {
+    height: 100%;
+    width: 80%;
+    background-color: #f8f8f83d;
+  backdrop-filter: blur(5px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center;*/
+} 
+.weather_loading {
+    position: relative;
+    
+}
+
+.weather__raindrops path {
+    fill: skyblue;
+}
+.weather__raindrops--1 {
+    animation: rain 1s 0.5s infinite;
+}
+.weather__raindrops--2 {
+    animation: rain 1s 0.3s infinite;
+}
+.weather__raindrops--3 {
+    animation: rain 2s 0.3s infinite;
+}
+.weather__raindrops--4 {
+    animation: rain 2s 0.5s infinite;
+}
+.weather__raindrops--5 {
+    animation: rain 2s 0.2s infinite;
+}
+.weather__raindrops--6 {
+    animation: rain 0.5s 0.1s infinite;
+}
+.weather__raindrops--7 {
+    animation: rain 2s 0.5s infinite;
+}
+.weather__raindrops--8 {
+    animation: rain 2s 0.1s infinite;
+}
+.weather__raindrops--9 {
+    animation: rain 1s 0.1s infinite;
+}
+.weather__raindrops--10 {
+    animation: rain 0.5s 0.5s infinite;
+}
+
+.weather__clouds path {
+    fill: white;
+    stroke: #27aae1;
+    stroke-width: 3;
+    stroke-miterlimit: 6;
+}
+.weather__clouds path:first-child {
+    animation: thunder 3s 1s infinite linear;
+}
+.weather__clouds path:last-child {
+    animation: thunder 3s 1.2s infinite linear;
+}
+.weather__lightning polygon {
+    fill: #ffe600;
+    opacity: 0;
+}
+.weather__lightning polygon:first-child {
+    animation: lightning 3s 1s infinite linear;
+}
+.weather__lightning polygon:last-child {
+    animation: lightning 3s 1.2s infinite linear;
+}
+@keyframes rain {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+   }
+    100% {
+        opacity: 0;
+        transform: translate(-25px, 35px);
+   }
+}
+@keyframes thunder {
+    0% {
+        fill: #fff;
+   }
+    1% {
+        fill: #333;
+   }
+    2% {
+        fill: #fff;
+   }
+    5% {
+        fill: #fff;
+   }
+    6% {
+        fill: #333;
+   }
+    12% {
+        fill: #fff;
+   }
+}
+@keyframes lightning {
+    0% {
+        opacity: 0;
+   }
+    1% {
+        opacity: 1;
+   }
+    5% {
+        opacity: 0;
+   }
+    6% {
+        opacity: 1;
+   }
+    16% {
+        opacity: 0;
+   }
+}

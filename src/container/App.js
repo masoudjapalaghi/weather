@@ -2,6 +2,7 @@ import { isEmpty } from "lodash";
 import React, { Fragment, useEffect, useState } from "react";
 import { getWeather } from "../services/weatherService";
 import { getLocalTime } from "./../services/localTimeService";
+import Loading from "./loading";
 
 function Weather() {
   const [place, setPlace] = useState();
@@ -17,7 +18,7 @@ function Weather() {
   };
   const handleGetWeather = async (city) => {
     try {
-      const { data } = await getWeather(city||place);
+      const { data } = await getWeather(city || place);
       setWeatherPlace(data);
     } catch (error) {
       console.log(error);
@@ -29,17 +30,19 @@ function Weather() {
   };
   useEffect(() => {
     handleGetLocalTime();
-    if(!isEmpty(localTime)){
+  }, [])
+  useEffect(() => {
+    if (!isEmpty(localTime)) {
       handleGetWeather(localTime.location.city);
     }
-  }, []);
+  }, [localTime]);
   console.log(localTime);
   console.log(weatherPlace);
- if(isEmpty(weatherPlace)){
-   return <h1>LODDING...</h1>
-}
+  if (!isEmpty(weatherPlace)) {
+    return <Loading/>;
+  }
   return (
-  <Fragment>
+    <Fragment>
       <div className="App">
         <h1>مسعود جاپلقی</h1>
         <form
@@ -57,7 +60,7 @@ function Weather() {
           />
           <button style={{ backgroundColor: "skyblue" }}>GO</button>
         </form>
-        <h2>{kelvinToCelsius(weatherPlace.main.temp)}</h2>
+        {/* <h2>{kelvinToCelsius(weatherPlace.main.temp)}</h2> */}
       </div>
     </Fragment>
   );
