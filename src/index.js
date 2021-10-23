@@ -1,7 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import App from './container/app';
+import App from "./container/app";
 
 ReactDOM.render(
-  <App />,document.getElementById("root")
+  <Fragment>
+    <App />
+  </Fragment>,
+  document.getElementById("root")
 );

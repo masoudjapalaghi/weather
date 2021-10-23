@@ -9252,6 +9252,18 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
 
+"react-promise-loader@^1.1.2":
+  "integrity" "sha512-HEfUoa1uIEU/ClwSeXqmyX/Vi0O8Cc3AgeRuIWtXdu/j3VLlM1xnf6xJldO4POIqn7sMisVziBjWVpyilCPORQ=="
+  "resolved" "https://registry.npmjs.org/react-promise-loader/-/react-promise-loader-1.1.2.tgz"
+  "version" "1.1.2"
+  dependencies:
+    "prop-types" "^15.7.2"
+
+"react-promise-tracker@^2.1.0":
+  "integrity" "sha512-1LQSGAnFF4o++iPFgeBrMpS+ZHQg8ZGl9Zuf70v+OoLxuOnUeLCP7ugma+InBCUZzPnSLyWTLt/jyW+FAy5ELQ=="
+  "resolved" "https://registry.npmjs.org/react-promise-tracker/-/react-promise-tracker-2.1.0.tgz"
+  "version" "2.1.0"
+
 "react-refresh@^0.8.3":
   "integrity" "sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg=="
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"

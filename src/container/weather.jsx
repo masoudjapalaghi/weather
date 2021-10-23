@@ -1,13 +1,16 @@
 import { isEmpty } from "lodash";
 import React, { Fragment, useEffect, useState } from "react";
+import { trackPromise } from 'react-promise-tracker';
 import { getWeather } from "../services/weatherService";
 import { getLocalTime } from "../services/localTimeService";
 import Loading from "../utils/loading";
+import FormLocation from "../components/formLocation/formLocation";
 
 function Weather() {
   const [place, setPlace] = useState();
   const [localTime, setLocalTime] = useState();
   const [weatherPlace, setWeatherPlace] = useState();
+  const [isLoading, setLoading] = useState(true)
   const handleGetLocalTime = async () => {
     try {
       const timeLocation = await getLocalTime();
@@ -17,12 +20,13 @@ function Weather() {
     }
   };
   const handleGetWeather = async (city) => {
+    const { data,status } = await getWeather(city || place);
     try {
-      const { data } = await getWeather(city || place);
       setWeatherPlace(data);
     } catch (error) {
       console.log(error);
     }
+
   };
 
   const kelvinToCelsius = (k) => {
@@ -43,24 +47,12 @@ function Weather() {
   }
   return (
     <Fragment>
-      {/* <div className="App">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleGetWeather();
-          }}
-          style={{ display: "flex" }}
-        >
-          <input
-            type="text"
-            style={{ border: "1px solid black" }}
-            onChange={(e) => setPlace(e.target.value)}
-            value={place}
-          />
-          <button style={{ backgroundColor: "skyblue" }}>GO</button>
-        </form>
-        <h2>{kelvinToCelsius(weatherPlace.main.temp)}</h2>
-      </div> */}
+      <div className="App_weather">
+      <div className="weather_cart">
+        {/* <h2>{kelvinToCelsius(weatherPlace.main.temp)}</h2> */}
+      </div>
+       <FormLocation handleGetWeather={handleGetWeather} Place={place} setPlace={setPlace}/>
+      </div>
     </Fragment>
   );
 }
