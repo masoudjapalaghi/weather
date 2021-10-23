@@ -7,13 +7,13 @@ import Loading from "../utils/loading";
 import FormLocation from "../components/formLocation/formLocation";
 
 function Weather() {
-  const [place, setPlace] = useState();
+  const [place, setPlace] = useState('');
   const [localTime, setLocalTime] = useState();
   const [weatherPlace, setWeatherPlace] = useState();
   const [isLoading, setLoading] = useState(true)
   const handleGetLocalTime = async () => {
     try {
-      const timeLocation = await getLocalTime();
+      const timeLocation = await getLocalTime(place);
       setLocalTime(timeLocation.data);
     } catch (error) {
       console.log(error);
@@ -49,7 +49,7 @@ function Weather() {
       <div className="weather_cart">
         {/* <h2>{kelvinToCelsius(weatherPlace.main.temp)}</h2> */}
       </div>
-       <FormLocation handleGetWeather={handleGetWeather} Place={place} setPlace={setPlace}/>
+       <FormLocation handleGetWeather={handleGetWeather} handleGetLocalTime={handleGetLocalTime} Place={place} setPlace={setPlace}/>
       </div>
     </Fragment>
   );

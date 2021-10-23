@@ -1,12 +1,13 @@
 import React from "react";
 
-const FormLocation = ({ place, setPlace, handleGetWeather }) => {
+const FormLocation = ({ place, setPlace, handleGetWeather,handleGetLocalTime }) => {
   return (
     <form
       className="form_place"
       onSubmit={(e) => {
         e.preventDefault();
         handleGetWeather();
+        handleGetLocalTime();
       }}
     >
       <div className="input-group">
