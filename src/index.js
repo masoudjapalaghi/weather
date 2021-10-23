@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import App from "./container/app";
+import App from './container/App';
+import Loading from "./utils/loading";
 
 ReactDOM.render(
   <Fragment>

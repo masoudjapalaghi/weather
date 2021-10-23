@@ -1,7 +1,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: #8e9eab no-repeat center cover; 
+  background: #8e9eab ; 
   background-image: linear-gradient(0deg, #8e9eab 0%, #eef2f3 62%);
 }
 .App_weather{

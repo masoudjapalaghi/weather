@@ -18,7 +18,7 @@ const FormLocation = ({ place, setPlace, handleGetWeather }) => {
             value={place}
           />
         </label>
-        <button className="unit" type="button">
+        <button className="unit">
           <i className="fa fa-search"></i>
         </button>
       </div>

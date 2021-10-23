@@ -1,11 +1,14 @@
-import React from 'react';
-import Weather from './weather';
-
+import React, { Fragment } from "react";
+import Loading from "../utils/loading";
+import Weather from "./weather";
 
 const App = () => {
-    return ( 
-        <Weather/>
-     );
-}
- 
+  return (
+    <Fragment>
+      <Weather />
+      <Loading />
+    </Fragment>
+  );
+};
+
 export default App;

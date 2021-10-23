@@ -42,9 +42,7 @@ function Weather() {
   }, [localTime]);
   console.log(localTime);
   console.log(weatherPlace);
-  if (isEmpty(weatherPlace)) {
-    return <Loading/>;
-  }
+
   return (
     <Fragment>
       <div className="App_weather">
