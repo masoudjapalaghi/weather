@@ -10,7 +10,7 @@ const FormLocation = ({ place, setPlace, handleGetWeather,handleGetLocalTime }) 
         handleGetLocalTime();
       }}
     >
-      <div className="input-group">
+      <div className="input-group ">
         <label>
           <input
             type="text"
