@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Loading from "../utils/loading";
+import Loading from "../components/common/loading";
 import Weather from "./weather";
 
 const App = () => {

@@ -19,7 +19,7 @@ axios.interceptors.response.use(null, (error) => {
       icon: "error",
       title: "Oops...",
       text: "مشکلی از سمت سرور به وجود آمده است؟!؟",
-      footer: "<smalll>چند لحظه بعد امتحان کنید؟!؟  </smalll>",
+      footer: "<smalll>مرورگرتان را بروز ودوباره امتحان کنید</smalll>",
     });
   }
 

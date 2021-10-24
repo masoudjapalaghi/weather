@@ -3,7 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { trackPromise } from "react-promise-tracker";
 import { getWeather } from "../services/weatherService";
 import { getLocalTime } from "../services/localTimeService";
-import Loading from "../utils/loading";
+import Loading from "../components/common/loading";
 import FormLocation from "../components/formLocation/formLocation";
 import Swal from "sweetalert2";
 
