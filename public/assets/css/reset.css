@@ -12,7 +12,10 @@
   }
   
   /* @font-face  */
-
+div[aria-labelledby="swal2-title"],#swal2-html-container{
+	font-family: 'BYekan';
+	font-weight: 900!important;
+}
 [ REBOOT ]*/
 *, *:before, *:after {
 	margin: 0px; 

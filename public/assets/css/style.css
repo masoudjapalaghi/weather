@@ -1,8 +1,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: #8e9eab ; 
-  background-image: linear-gradient(0deg, #8e9eab 0%, #eef2f3 62%);
+  background-color: #e6e7ee;
 }
 .App_weather{
     display: flex;
@@ -14,17 +13,15 @@ body {
 
 /* form select location */
 .form_place{
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.26),
-    inset 0px 3px 15px rgba(0, 0, 0, 0.15);
-    background-color: #ebecf0;
+    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff ;
     display: flex;
     justify-content: center;
     direction: rtl;
     backdrop-filter: blur(5px);
     height: 100px;
-    border-radius: 15px;
     width: 260px;
-    margin: 0 auto 50px auto;
+    border-radius: 15px;
+    margin: 0 auto 30px auto;
     
 }
 .input-group {
@@ -42,7 +39,7 @@ button, input {
     outline: 0;
     font-size: 14px;
     font-weight:600 ;
-    border-radius: 320px;
+    border-radius: 5px;
     padding: 10px;
     background-color: #ebecf0;
     text-shadow: 1px 1px 0 #fff;
@@ -89,3 +86,36 @@ button.unit {
     font-size: 15px;
 }
 /* form select location */
+/* cart information weather */
+.weather_cart{
+    width: 260px;
+    height: 350px;
+    margin: 20px auto 0 auto;
+}
+.card {
+    position: relative;
+    min-height: 320px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #e6e7ee;
+    background-clip: border-box;
+    border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+    border-radius: 0.55rem;
+}
+.shadow-inset {
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+}
+.border-light {
+    border-color: #D1D9E6 !important;
+}
+/*  */
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
+.shadow-soft {
+    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+}
