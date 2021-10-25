@@ -1,12 +1,13 @@
-import { isEmpty, isUndefined } from "lodash";
 import React, { Fragment, useEffect, useState } from "react";
-import { trackPromise } from "react-promise-tracker";
-import Flag from 'react-world-flags'
+import { isEmpty } from "lodash";
+import Flag from "react-world-flags";
 import { getWeather } from "../services/weatherService";
 import { getLocalTime } from "../services/localTimeService";
-import Loading from "../components/common/loading";
 import FormLocation from "../components/formLocation/formLocation";
 import Swal from "sweetalert2";
+import { Clock } from "./../utils/clock";
+import Moon from "../components/weatherVisual/nighte";
+import Sunny from './../components/weatherVisual/day';
 
 function Weather() {
   const [place, setPlace] = useState("");
@@ -78,17 +79,40 @@ function Weather() {
             <div className="card-body  shadow-soft  border-light ">
               {!isEmpty(weatherPlace) && !isEmpty(localTime) ? (
                 <Fragment>
-                  <div className="">
-                    <h1>hassan</h1>
+                  <div className="weather_visual">
+                    {localTime.sunset<=<Clock/>?<Moon />:<Sunny/>}
                   </div>
                   <div className="weather_information">
-                  <div className="location_cart">
-                    <h1>{weatherPlace.name}</h1>
-                    <Flag code={weatherPlace.sys.country} height="15" />
-                  </div>
-                    <div>
-                      <h2>{weatherPlace.main.temp}</h2>
-                      <h2>{weatherPlace.main.humidity}</h2>
+                    <div className="location_cart">
+                      <h1>{weatherPlace.name}</h1>
+                      <Flag
+                        code={weatherPlace.sys.country}
+                        height="10"
+                        width="18"
+                      />
+                    </div>
+                    <h2 className="description">
+                      {weatherPlace.weather[0].description}
+                    </h2>
+                    <div className="data_cart">
+                      <span>
+                        <i className="fas fa-wind"></i>
+                        <h3>
+                          {Math.ceil(weatherPlace.wind.speed)}
+                          &#13214;
+                        </h3>
+                      </span>
+                      <span>
+                        <i className="fas fa-tint"></i>
+                        <h3>
+                          {weatherPlace.main.humidity}
+                          &#x25;
+                        </h3>
+                      </span>
+                      <span>
+                        <i className="fas fa-thermometer-0"></i>
+                        <h3>{Math.ceil(weatherPlace.main.temp)}&#176;C</h3>
+                      </span>
                     </div>
                   </div>
                 </Fragment>

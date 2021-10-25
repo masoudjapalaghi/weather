@@ -7,8 +7,9 @@
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  position: absolute;
   top: 0;
-    position: absolute;
+  z-index: 1000;
 }
 .weather_loading {
   position: relative;

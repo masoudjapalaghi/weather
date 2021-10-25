@@ -27,7 +27,6 @@ div[aria-labelledby="swal2-title"],#swal2-html-container{
 
 body, html {
 	font-family: 'BYekan';
-	font-size: 15px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -82,7 +81,6 @@ iframe {border: none;}
   
   /* Track */
   ::-webkit-scrollbar-track {
-	/* box-shadow: inset 0 0 5px grey; */
 	border-radius: 50px;
 	background-color: transparent;
   }
