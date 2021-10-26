@@ -19,6 +19,7 @@ function Weather() {
     place,
     setPlace,
   } = weatherGlobalInformation;
+  console.log(localTime);
   return (
     <Fragment>
       <div className="App_weather">
@@ -28,13 +29,13 @@ function Weather() {
               {!isEmpty(weatherPlace) && !isEmpty(localTime) ? (
                 <Fragment>
                   <div className="weather_visual">
-                    {localTime.sunset <= time ? (
-                      <Moon
+                    {localTime.sunset >= time&&localTime.sunrise<=time ? (
+                      <Sunny
                         handleDifrentMode={handleDifrentMode}
                         weatherPlace={weatherPlace}
                       />
                     ) : (
-                      <Sunny
+                      <Moon
                         handleDifrentMode={handleDifrentMode}
                         weatherPlace={weatherPlace}
                       />

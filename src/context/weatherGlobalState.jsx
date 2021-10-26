@@ -20,6 +20,9 @@ const WeaderGlobalState = ({children}) => {
       if (minute < 10) {
         minute = `0${minute}`;
       }
+      if (hour < 10) {
+        hour = `0${hour}`;
+      }
       setTime(`${hour}:${minute}`);
     };
     const handleGetLocalTime = async () => {
@@ -75,7 +78,7 @@ const WeaderGlobalState = ({children}) => {
         handleGetWeather(localTime.location.city);
       }
     }, [localTime]);
-  
+  console.log(time)
    const handleDifrentMode = (param) => {
       switch (param) {
         case 800:
