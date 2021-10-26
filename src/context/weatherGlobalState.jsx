@@ -78,7 +78,6 @@ const WeaderGlobalState = ({children}) => {
         handleGetWeather(localTime.location.city);
       }
     }, [localTime]);
-  console.log(time)
    const handleDifrentMode = (param) => {
       switch (param) {
         case 800:

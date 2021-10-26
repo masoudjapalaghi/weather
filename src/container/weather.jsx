@@ -19,7 +19,6 @@ function Weather() {
     place,
     setPlace,
   } = weatherGlobalInformation;
-  console.log(localTime);
   return (
     <Fragment>
       <div className="App_weather">
