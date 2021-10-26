@@ -77,7 +77,7 @@ const WeaderGlobalState = ({children}) => {
     }, [localTime]);
   
    const handleDifrentMode = (param) => {
-      switch (701) {
+      switch (param) {
         case 800:
           return null;
         case 801:
