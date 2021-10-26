@@ -250,9 +250,22 @@
   right: 60px;
 }
 .pos-star5 {
-  top: 120px;
+  top: 150px;
+  left: 160px;
+}
+.pos-star6 {
+  top: 20px;
   left: 210px;
 }
+.pos-star7 {
+  top: 120px;
+  left: 10px;
+}
+.pos-star8 {
+  top: 10px;
+  left: 80px;
+}
+
 
 .star {
   width: 2px;
@@ -492,6 +505,34 @@
       snow 90px 35px;
   }
 }
+/* mist */
+.mist{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mist::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+background-color: rgba(128, 128, 128, 0.11);
+border-radius: 100%;
+animation: mist 2s infinite linear;
+}
+@keyframes mist {
+  from{
+    transform: scale(30);
+  }
+  to{
+    transform: scale(10);
+  }
+}
+
+
+/* mist */
 
 /* differnt mode weather*/
 /* handle code 800-804 */
@@ -562,13 +603,23 @@
 }
 .clouds_parent .snowy:nth-child(2) {
   position: absolute;
-  top: 10px;
+  top: 50px;
   right: 55px;
+}
+.clouds_parent .snowy:nth-child(2)::after{
+content: none;
 }
 .clouds_parent .snowy:nth-child(3) {
   position: absolute;
-  top: 20px;
+  top: 120px;
   right: 95px;
 }
-
+.clouds_parent .snowy:nth-child(4) {
+  position: absolute;
+  top: 50px;
+  right: 140px;
+}
+.clouds_parent .snowy:nth-child(4)::after {
+content: none;
+}
 /* handle code 600-622 */

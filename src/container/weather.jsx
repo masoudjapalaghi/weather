@@ -1,22 +1,41 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { isEmpty } from "lodash";
+import { isEmpty, now } from "lodash";
 import Flag from "react-world-flags";
 import { getWeather } from "../services/weatherService";
 import { getLocalTime } from "../services/localTimeService";
 import FormLocation from "../components/formLocation/formLocation";
 import Swal from "sweetalert2";
-import { Clock } from "./../utils/clock";
 import Moon from "../components/weatherVisual/nighte";
-import Sunny from './../components/weatherVisual/day';
-import { Stormy } from "../components/weatherVisual/weatherVisual";
+import Sunny from "./../components/weatherVisual/day";
+import { Cloudy, Mist, Rainy, Snowy, Stormy } from './../components/weatherVisual/weatherVisual';
+
+
+
+
 
 function Weather() {
   const [place, setPlace] = useState("");
+  let [time, setTime] = useState();
   const [localTime, setLocalTime] = useState();
   const [network, setNetwork] = useState("online");
   const [weatherPlace, setWeatherPlace] = useState();
   const [isLoading, setLoading] = useState(true);
-
+  const clock = () => {
+    var local = new Date();
+    var hour = local.getHours();
+    var minute = local.getMinutes();
+    if (hour > 12) {
+      hour -= 12;
+    }
+    if (hour < 10) {
+      hour = `0${hour}`;
+    }
+    if (minute < 10) {
+      minute = `0${minute}`;
+    }
+    setTime(`${hour}:${minute}`);
+  };
+  console.log(time)
   const handleGetLocalTime = async () => {
     if (network === "online") {
       try {
@@ -56,6 +75,7 @@ function Weather() {
   };
 
   useEffect(() => {
+    clock();
     handleGetLocalTime();
     window.addEventListener("offline", function (e) {
       setNetwork("offline");
@@ -69,6 +89,158 @@ function Weather() {
       handleGetWeather(localTime.location.city);
     }
   }, [localTime]);
+
+ const handleDifrentMode = (param) => {
+    switch (param) {
+      case 800:
+        return null;
+      case 801:
+        return <Cloudy />;
+      case 802:
+        return (
+          <Fragment>
+            <Cloudy />
+            <Cloudy />
+          </Fragment>
+        );
+      case 803:
+        return (
+          <Fragment>
+            <Cloudy />
+            <Stormy />
+          </Fragment>
+        );
+      case 804:
+        return (
+          <Fragment>
+            <Cloudy />
+            <Stormy />
+            <Stormy />
+            <Cloudy />
+          </Fragment>
+        );
+      case 500:
+      case 501:
+      case 502:
+      case 503:
+      case 504:
+      case 511:
+        return <Rainy />;
+      case 520:
+        return (
+          <Fragment>
+            <Rainy />
+            <Stormy />
+          </Fragment>
+        );
+      case 521:
+        return (
+          <Fragment>
+            <Rainy />
+            <Stormy />
+            <Stormy />
+          </Fragment>
+        );
+      case 522:
+      case 531:
+        return (
+          <Fragment>
+            <Rainy />
+            <Stormy />
+            <Rainy />
+            <Rainy />
+          </Fragment>
+        );
+      case 200:
+        return <Stormy />;
+      case 201:
+      case 202:
+        return (
+          <Fragment>
+            <Rainy />
+            <Stormy />
+            <Stormy />
+          </Fragment>
+        );
+      case 210:
+      case 211:
+        return (
+          <Fragment>
+            <Stormy />
+            <Stormy />
+          </Fragment>
+        );
+      case 212:
+      case 221:
+      case 231:
+      case 232:
+        return (
+          <Fragment>
+            <Rainy />
+            <Stormy />
+            <Stormy />
+            <Rainy />
+            <Stormy />
+          </Fragment>
+        );
+      case 600:
+      case 601:
+        return <Snowy />;
+      case 602:
+      case 611:
+      case 612:
+      case 613:
+        return (
+          <Fragment>
+            <Snowy />
+            <Snowy />
+          </Fragment>
+        );
+
+      case 615:
+        return (
+          <Fragment>
+            <Snowy />
+            <Snowy />
+            <Rainy />
+          </Fragment>
+        );
+      case 616:
+      case 620:
+        return (
+          <Fragment>
+            <Snowy />
+            <Snowy />
+            <Snowy />
+          </Fragment>
+        );
+      case 621:
+      case 622:
+        return (
+          <Fragment>
+            <Snowy />
+            <Snowy />
+            <Snowy />
+            <Snowy />
+          </Fragment>
+        );
+      case 701:
+      case 711:
+      case 721:
+      case 731:
+      case 741:
+      case 751:
+      case 761:
+      case 762:
+      case 771:
+      case 781:
+        return <Mist />;
+
+      default:
+        return null;
+    }
+  };
+
   console.log(network);
   console.log(localTime);
   console.log(weatherPlace);
@@ -81,7 +253,11 @@ function Weather() {
               {!isEmpty(weatherPlace) && !isEmpty(localTime) ? (
                 <Fragment>
                   <div className="weather_visual">
-                    {localTime.sunset<=<Clock/>?<Moon weatherPlace={weatherPlace}/>:<Sunny/>}
+                    {localTime.sunset <= time ? (
+                      <Moon handleDifrentMode={handleDifrentMode} weatherPlace={weatherPlace}/>
+                    ) : (
+                      <Sunny handleDifrentMode={handleDifrentMode} weatherPlace={weatherPlace}/>
+                    )}
                   </div>
                   <div className="weather_information">
                     <div className="location_cart">

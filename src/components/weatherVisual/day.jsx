@@ -1,7 +1,15 @@
-import React from 'react';
+import React from "react";
+import { Fragment } from "react";
 
- const Sunny = () => {
-    return <div className="sunny"></div>;
-  };
+const Sunny = ({ handleDifrentMode, weatherPlace }) => {
+  return (
+    <Fragment>
+      <div className="sunny"></div>);
+      <div className="clouds_parent">
+        {handleDifrentMode(weatherPlace.weather[0].id)}
+      </div>
+    </Fragment>
+  );
+};
 
-  export default Sunny;
+export default Sunny;

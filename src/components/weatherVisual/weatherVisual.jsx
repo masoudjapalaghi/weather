@@ -13,5 +13,5 @@ export const Snowy = () => {
   return <div className="snowy"></div>;
 };
 export const Mist = () => {
-    return <div className="Mist"></div>;
+    return <div className="mist"></div>;
   };
