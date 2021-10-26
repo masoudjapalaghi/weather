@@ -124,6 +124,7 @@ button.unit {
   align-items: center;
   min-height: 320px;
   overflow: hidden;
+  /* position: relative; */
 }
 .weather_visual{
     width: 90%;
@@ -131,6 +132,7 @@ button.unit {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .weather_information {
   width: 90%;

@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { Clock } from "./../utils/clock";
 import Moon from "../components/weatherVisual/nighte";
 import Sunny from './../components/weatherVisual/day';
+import { Stormy } from "../components/weatherVisual/weatherVisual";
 
 function Weather() {
   const [place, setPlace] = useState("");
@@ -80,7 +81,7 @@ function Weather() {
               {!isEmpty(weatherPlace) && !isEmpty(localTime) ? (
                 <Fragment>
                   <div className="weather_visual">
-                    {localTime.sunset<=<Clock/>?<Moon />:<Sunny/>}
+                    {localTime.sunset<=<Clock/>?<Moon weatherPlace={weatherPlace}/>:<Sunny/>}
                   </div>
                   <div className="weather_information">
                     <div className="location_cart">

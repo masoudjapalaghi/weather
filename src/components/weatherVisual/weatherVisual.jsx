@@ -12,3 +12,6 @@ export const Stormy = () => {
 export const Snowy = () => {
   return <div className="snowy"></div>;
 };
+export const Mist = () => {
+    return <div className="Mist"></div>;
+  };
