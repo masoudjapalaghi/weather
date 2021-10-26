@@ -125,6 +125,11 @@
   height: 50px;
   width: 50px;
 }
+.cloud_dark{
+  background: #222222!important;
+  box-shadow: #222222 65px -15px 0 -5px, #222222 25px -25px, #222222 30px 10px,
+    #222222 60px 15px 0 -10px, #222222 85px 5px 0 -5px!important;
+}
 .cloudy:after {
   animation: cloudy_shadow 5s ease-in-out infinite;
   background: #000000;
@@ -617,8 +622,19 @@ animation: mist 2s infinite linear;
 }
 .clouds_parent .cloudy:nth-child(2) {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 55px;
+}
+
+.cloud_dark:nth-child(2){
+  position: absolute!important;
+  top: 75px!important;
+  left: 5px!important;
+}
+.cloud_dark:nth-child(3){
+  position: absolute;
+  top: 85px;
+  right: 70px;
 }
 .clouds_parent .cloudy:nth-child(2)::after {
   content: none;
@@ -664,28 +680,28 @@ animation: mist 2s infinite linear;
 /* handle code 500-531 */
 /* handle code 600-622 */
 .clouds_parent .snowy:nth-child(1) {
-  position: absolute;
-  z-index: 20;
-  bottom: 20px;
-  left: -25px;
+  position: absolute!important;
+  z-index: 20!important;
+  bottom: 20px!important;
+  left: -25px!important;
 }
 .clouds_parent .snowy:nth-child(2) {
-  position: absolute;
-  top: 50px;
-  right: 55px;
+  position: absolute!important;
+  top: 50px!important;
+  right: 55px!important;
 }
 .clouds_parent .snowy:nth-child(2)::after{
 content: none;
 }
 .clouds_parent .snowy:nth-child(3) {
-  position: absolute;
-  top: 120px;
-  right: 95px;
+  position: absolute!important;
+  top: 120px!important;
+  right: 95px!important;
 }
 .clouds_parent .snowy:nth-child(4) {
-  position: absolute;
-  top: 50px;
-  right: 140px;
+  position: absolute!important;
+  top: 50px!important;
+  right: 140px!important;
 }
 .clouds_parent .snowy:nth-child(4)::after {
 content: none;

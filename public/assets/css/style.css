@@ -1,14 +1,14 @@
 body {
   width: 100%;
-  min-height: 100vh;
   background-color: #e6e7ee;
 }
 .App_weather {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 /* form select location */
@@ -18,23 +18,24 @@ body {
   justify-content: center;
   direction: rtl;
   backdrop-filter: blur(5px);
-  height: 100px;
+  height: 80px;
   width: 260px;
   border-radius: 15px;
-  margin: 0 auto 30px auto;
+  margin: 30px 0;
 }
-.input-group {
+.form_place .input-group {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-start;
+  min-height: 80px;
 }
-.input-group label {
+.form_place .input-group label {
   margin: 0;
   flex: 1;
 }
-button,
-input {
+.form_place button,
+.form_place input {
   border: 0;
   outline: 0;
   font-size: 14px;
@@ -46,7 +47,7 @@ input {
   color: gray;
 }
 
-input {
+.form_place input {
   margin-right: 5px;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   width: 95%;
@@ -56,10 +57,10 @@ input {
   appearance: none;
   -webkit-appearance: none;
 }
-input:focus {
+.form_place input:focus {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
-button {
+.form_place button {
   color: mediumspringgreen;
   font-weight: bold;
   box-shadow: -2px -2px 10px #fff, 2px 2px 10px #babecc;
@@ -67,14 +68,14 @@ button {
   cursor: pointer;
   font-weight: 600;
 }
-button:hover {
+.form_place button:hover {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
 }
-button:active {
+.form_place button:active {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
-button.unit {
+.form_place button.unit {
   border-radius: 8px;
   line-height: 0;
   width: 35px;
@@ -90,7 +91,7 @@ button.unit {
 .weather_cart {
   width: 260px;
   height: 350px;
-  margin: 20px auto 0 auto;
+  margin: 20px 0 ;
 }
 .card {
   position: relative;
@@ -109,7 +110,7 @@ button.unit {
   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff !important;
 }
 .shadow-soft {
-  box-shadow: -3px -3px 7px #ffffff, 2px 2px 5px #b8b9be !important;
+  box-shadow: -3px -3px 6px #ffffff, 2px 2px 5px #b8b9be !important;
 }
 
 .border-light {
@@ -122,28 +123,29 @@ button.unit {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 320px;
+  height: 70%;
   overflow: hidden;
-  /* position: relative; */
 }
-.weather_visual{
-    width: 90%;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.weather_visual {
+  width: 90%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .weather_information {
   width: 90%;
+  height: 60%;
+  line-height: 1.8;
   direction: rtl;
   margin: 10px 0;
 }
 .weather_information .location_cart {
   position: relative;
-  font-size: .9em;
+  font-size: 0.9em;
   display: flex;
-  margin:0 3% 0 10px;
+  margin: 0 3% 0 10px;
 }
 .weather_information .location_cart h1 {
   text-shadow: -2px -2px #ffffff, 1px 1px #b8b9be;
@@ -151,31 +153,31 @@ button.unit {
 .weather_information .description {
   font-size: 0.8em;
   color: rgb(87, 87, 87);
-  margin:0 4%  10px 0;
+  margin: 0 4% 10px 0;
 }
 .weather_information .data_cart {
   display: flex;
   justify-content: space-around;
+  margin: 10px 0;
 }
 .weather_information .data_cart span {
-    box-shadow: -3px -3px 7px #ffffff, 2px 2px 5px #b8b9be !important;
-    direction: ltr;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  box-shadow: -3px -3px 7px #ffffff, 2px 2px 5px #b8b9be !important;
+  direction: ltr;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.weather_information .data_cart span h3{
-    font-size: .9em;
+.weather_information .data_cart span h3 {
+  font-size: 0.9em;
 }
-.weather_information .data_cart span i{
-    position: absolute;
+.weather_information .data_cart span i {
+  position: absolute;
   color: tomato;
-    top: 5px;
-    left: 5px;
-    font-size: 1em;
+  top: 5px;
+  left: 5px;
+  font-size: 1em;
 }

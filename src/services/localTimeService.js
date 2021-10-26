@@ -1,6 +1,5 @@
 import http from "./httpService";
 import config from "./config.json";
-import { isEmpty } from "lodash";
 export const getLocalTime = (location) => {
   if (location.length===0) {
     return http.get(

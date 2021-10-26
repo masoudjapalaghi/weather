@@ -3,6 +3,9 @@ import React from "react";
 export const Cloudy = () => {
   return <div className="cloudy"></div>;
 };
+export const CloudyDark = () => {
+  return <div className="cloudy cloud_dark"></div>;
+};
 export const Rainy = () => {
   return <div className="rainy"></div>;
 };

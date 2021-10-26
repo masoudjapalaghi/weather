@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { Fragment, useContext } from "react";
 import { isEmpty } from "lodash";
 import Flag from "react-world-flags";
 

@@ -1,12 +1,7 @@
 import axios from "axios";
-import { isEmpty } from "lodash";
 import Swal from "sweetalert2";
 axios.interceptors.response.use(null, (error) => {
   const notFound = error.response.status === 404;
-  const expectedError =
-    error.response.status >= 400 &&
-    error.response.status < 500 &&
-    !error.response.status === 404;
   if (notFound) {
     Swal.fire({
       icon: "info",

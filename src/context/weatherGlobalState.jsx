@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import weatherContext from "./weatherContext";
-import { Cloudy, Mist, Rainy, Snowy, Stormy } from './../components/weatherVisual/weatherVisual';
+import { Cloudy, CloudyDark, Mist, Rainy, Snowy, Stormy } from './../components/weatherVisual/weatherVisual';
 import Swal from "sweetalert2";
 import { isEmpty } from "lodash";
 import { getLocalTime } from './../services/localTimeService';
@@ -77,7 +77,7 @@ const WeaderGlobalState = ({children}) => {
     }, [localTime]);
   
    const handleDifrentMode = (param) => {
-      switch (param) {
+      switch (701) {
         case 800:
           return null;
         case 801:
@@ -94,8 +94,8 @@ const WeaderGlobalState = ({children}) => {
           return (
             <Fragment>
               <Cloudy />
-              <Stormy />
-              <Stormy />
+              <CloudyDark />
+              <CloudyDark />
               <Cloudy />
             </Fragment>
           );
@@ -220,10 +220,6 @@ const WeaderGlobalState = ({children}) => {
           return weatherPlace.weather[0].description;
       }
     };
-  
-    console.log(network);
-    console.log(localTime);
-    console.log(weatherPlace);
   return (
     <weatherContext.Provider
       value={{
