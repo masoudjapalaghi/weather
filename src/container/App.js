@@ -1,13 +1,17 @@
 import React, { Fragment } from "react";
+import { BrowserRouter } from "react-router-dom";
 import Loading from "../components/common/loading";
 import Weather from "./weather";
+import WeatherGlobalState from "../context/weatherGlobalState";
 
 const App = () => {
   return (
-    <Fragment>
+    <BrowserRouter>
+    <WeatherGlobalState>
       <Weather />
       <Loading />
-    </Fragment>
+    </WeatherGlobalState>
+    </BrowserRouter>
   );
 };
 
