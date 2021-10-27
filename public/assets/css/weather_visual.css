@@ -125,10 +125,10 @@
   height: 50px;
   width: 50px;
 }
-.cloud_dark{
-  background: #222222!important;
+.cloud_dark {
+  background: #222222 !important;
   box-shadow: #222222 65px -15px 0 -5px, #222222 25px -25px, #222222 30px 10px,
-    #222222 60px 15px 0 -10px, #222222 85px 5px 0 -5px!important;
+    #222222 60px 15px 0 -10px, #222222 85px 5px 0 -5px !important;
 }
 .cloudy:after {
   animation: cloudy_shadow 5s ease-in-out infinite;
@@ -339,7 +339,6 @@
   left: 80px;
 }
 
-
 .star {
   width: 2px;
   height: 2px;
@@ -521,7 +520,6 @@
   width: 7px;
   opacity: 0.8;
   transform: scale(0.9);
-  
 }
 @keyframes snowy {
   50% {
@@ -538,18 +536,17 @@
   0% {
     box-shadow: rgba(238, 238, 238, 0) 30px 30px,
       rgba(238, 238, 238, 0) 40px 40px, snow 50px 75px, snow 55px 50px,
-      snow 70px 100px, snow 80px 95px, snow 110px 45px,
-      snow 90px 35px;
+      snow 70px 100px, snow 80px 95px, snow 110px 45px, snow 90px 35px;
   }
   25% {
-    box-shadow: snow 30px 45px, snow 40px 60px, snow 50px 90px,
-      snow 55px 65px, rgba(238, 238, 238, 0) 70px 120px,
-      rgba(238, 238, 238, 0) 80px 120px, snow 110px 70px, snow 90px 60px;
+    box-shadow: snow 30px 45px, snow 40px 60px, snow 50px 90px, snow 55px 65px,
+      rgba(238, 238, 238, 0) 70px 120px, rgba(238, 238, 238, 0) 80px 120px,
+      snow 110px 70px, snow 90px 60px;
   }
   26% {
-    box-shadow: snow 30px 45px, snow 40px 60px, snow 50px 90px,
-      snow 55px 65px, rgba(238, 238, 238, 0) 70px 40px,
-      rgba(238, 238, 238, 0) 80px 20px, snow 110px 70px, snow 90px 60px;
+    box-shadow: snow 30px 45px, snow 40px 60px, snow 50px 90px, snow 55px 65px,
+      rgba(238, 238, 238, 0) 70px 40px, rgba(238, 238, 238, 0) 80px 20px,
+      snow 110px 70px, snow 90px 60px;
   }
   50% {
     box-shadow: snow 30px 70px, snow 40px 80px,
@@ -557,9 +554,9 @@
       snow 80px 45px, snow 110px 95px, snow 90px 85px;
   }
   51% {
-    box-shadow: snow 30px 70px, snow 40px 80px,
-      rgba(238, 238, 238, 0) 50px 45px, snow 55px 80px, snow 70px 60px,
-      snow 80px 45px, snow 110px 95px, snow 90px 85px;
+    box-shadow: snow 30px 70px, snow 40px 80px, rgba(238, 238, 238, 0) 50px 45px,
+      snow 55px 80px, snow 70px 60px, snow 80px 45px, snow 110px 95px,
+      snow 90px 85px;
   }
   75% {
     box-shadow: snow 30px 95px, snow 40px 100px, snow 50px 60px,
@@ -574,36 +571,34 @@
   100% {
     box-shadow: rgba(238, 238, 238, 0) 30px 120px,
       rgba(238, 238, 238, 0) 40px 120px, snow 50px 75px, snow 55px 50px,
-      snow 70px 100px, snow 80px 95px, snow 110px 45px,
-      snow 90px 35px;
+      snow 70px 100px, snow 80px 95px, snow 110px 45px, snow 90px 35px;
   }
 }
 /* mist */
-.mist{
+.mist {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mist::after{
+.mist::after {
   content: "";
   width: 10px;
   height: 10px;
   display: inline-block;
-background-color: rgba(128, 128, 128, 0.11);
-border-radius: 100%;
-animation: mist 2s infinite linear;
+  background-color: rgba(128, 128, 128, 0.11);
+  border-radius: 100%;
+  animation: mist 2s infinite linear;
 }
 @keyframes mist {
-  from{
+  from {
     transform: scale(30);
   }
-  to{
+  to {
     transform: scale(10);
   }
 }
-
 
 /* mist */
 
@@ -614,96 +609,105 @@ animation: mist 2s infinite linear;
   width: 100%;
   height: 100%;
 }
-.clouds_parent .cloudy:nth-child(1) {
+.eighthundred_tow_tree_lighta {
   position: absolute;
   z-index: 20;
   bottom: 20px;
   left: -25px;
 }
-.clouds_parent .cloudy:nth-child(2) {
+.eighthundred_tow_tree_lightb {
   position: absolute;
   top: 30px;
   right: 55px;
 }
 
-.cloud_dark:nth-child(2){
-  position: absolute!important;
-  top: 75px!important;
-  left: 5px!important;
+.eighthundred_tow_tree_darka{
+  position: absolute !important;
+  top: 75px !important;
+  left: 5px !important;
 }
-.cloud_dark:nth-child(3){
+.eighthundred_tow_tree_darkb {
   position: absolute;
   top: 85px;
   right: 70px;
 }
-.clouds_parent .cloudy:nth-child(2)::after {
+.eighthundred_tow_tree_darka::after,
+.eighthundred_tow_tree_darkb::after {
   content: none;
 }
-.clouds_parent .stormy{
+.eighthundred_tow_tree_lightc{
   position: absolute;
-  bottom: 50px;
-  left: 10px;
-  z-index:11;
+  z-index: 20;
+  bottom:10px;
+  right: 65px;
 }
-.clouds_parent .stormy:nth-child(3){
-  position: absolute;
-  bottom: 0px;
-  left:20px;
-  z-index: 1;
-}
-.clouds_parent .cloudy:nth-child(4) {
-  position: absolute;
-  right: 55px;
-  bottom: 5px;
-  z-index: 10;
-}
+
 /* handle code 800-804 */
-/* handle code 500-531 */
-.clouds_parent .rainy:nth-child(1) {
+/* handle code 500-531 and 200-232 */
+.fivehundred_zero_eleven_rainy_a {
   position: absolute;
   z-index: 20;
   bottom: 20px;
   left: -25px;
 }
-.clouds_parent .rainy:nth-child(3){
+
+.fivehundred_zero_eleven_stormy_a{
   position: absolute;
-  bottom: 20px;
-  right: 60px;
+  bottom: 40px;
+  left: 25px;
+  z-index: 1;
+
 }
-.clouds_parent .rainy:nth-child(4){
+.fivehundred_zero_eleven_rainy_b{
   position: absolute;
-  bottom: 0px;
-  right: 110px;
+  left: 40px;
+  z-index: 20;
+ bottom: 20px;
+}
+.fivehundred_zero_eleven_stormy_b{
+  position: absolute;
+  bottom: 50px;
+  left: -25px;
+}
+.fivehundred_zero_eleven_stormy_c{
+  position: absolute;
+  bottom: 50px;
+  right: 45px;
+}
+.fivehundred_zero_eleven_rainy_c{
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
 }
 
 
 /* handle code 500-531 */
 /* handle code 600-622 */
-.clouds_parent .snowy:nth-child(1) {
-  position: absolute!important;
-  z-index: 20!important;
-  bottom: 20px!important;
-  left: -25px!important;
+.fivehundred_zero_eleven_snowy_a {
+  position: absolute !important;
+  z-index: 20 !important;
+  bottom: 20px !important;
+  left: -25px !important;
 }
-.clouds_parent .snowy:nth-child(2) {
-  position: absolute!important;
-  top: 50px!important;
-  right: 55px!important;
+.fivehundred_zero_eleven_snowy_b {
+  position: absolute !important;
+  top: 50px !important;
+  right: 55px !important;
 }
-.clouds_parent .snowy:nth-child(2)::after{
-content: none;
+.fivehundred_zero_eleven_snowy_b::after {
+  content: none;
 }
-.clouds_parent .snowy:nth-child(3) {
-  position: absolute!important;
-  top: 120px!important;
-  right: 95px!important;
+.fivehundred_zero_eleven_snowy_c {
+  position: absolute !important;
+  top: 120px !important;
+  right: 95px !important;
 }
-.clouds_parent .snowy:nth-child(4) {
-  position: absolute!important;
-  top: 50px!important;
-  right: 140px!important;
+.fivehundred_zero_eleven_snowy_d {
+  position: absolute !important;
+  top: 50px !important;
+  right: 140px !important;
 }
 .clouds_parent .snowy:nth-child(4)::after {
-content: none;
+  content: none;
 }
 /* handle code 600-622 */

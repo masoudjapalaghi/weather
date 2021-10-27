@@ -75,22 +75,22 @@ const WeaderGlobalState = ({children}) => {
         case 800:
           return null;
         case 801:
-          return <Cloudy />;
+          return <Cloudy position={'eighthundred_tow_tree_lighta'}/>;
         case 802:
           case 803:
           return (
             <Fragment>
-              <Cloudy />
-              <Cloudy />
+              <Cloudy position={'eighthundred_tow_tree_lighta'}/>
+              <Cloudy position={'eighthundred_tow_tree_lightb'}/>
             </Fragment>
           );
         case 804:
           return (
             <Fragment>
-              <Cloudy />
-              <CloudyDark />
-              <CloudyDark />
-              <Cloudy />
+              <Cloudy position={'eighthundred_tow_tree_lighta'}/>
+              <Cloudy position={'eighthundred_tow_tree_lightc'}/>
+              <CloudyDark position={'eighthundred_tow_tree_darka'}/>
+              <CloudyDark position={'eighthundred_tow_tree_darkb'}/>
             </Fragment>
           );
         case 500:
@@ -99,49 +99,49 @@ const WeaderGlobalState = ({children}) => {
         case 503:
         case 504:
         case 511:
-          return <Rainy />;
+          return <Rainy position={'fivehundred_zero_eleven_rainy_a'}/>;
         case 520:
           return (
             <Fragment>
-              <Rainy />
-              <Stormy />
+              <Rainy position={'fivehundred_zero_eleven_rainy_a'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_a'}/>
             </Fragment>
           );
         case 521:
           return (
             <Fragment>
-              <Rainy />
-              <Stormy />
-              <Stormy />
+              <Rainy position={'fivehundred_zero_eleven_rainy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_c'}/>
             </Fragment>
           );
         case 522:
         case 531:
           return (
             <Fragment>
-              <Rainy />
-              <Stormy />
-              <Rainy />
-              <Rainy />
+              <Rainy position={'fivehundred_zero_eleven_rainy_a'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_a'}/>
+              <Rainy position={'fivehundred_zero_eleven_rainy_b'}/>
+              <Rainy position={'fivehundred_zero_eleven_rainy_c'}/>
             </Fragment>
           );
         case 200:
-          return <Stormy />;
+          return <Stormy position={'fivehundred_zero_eleven_stormy_a'}/>;
         case 201:
         case 202:
           return (
             <Fragment>
-              <Rainy />
-              <Stormy />
-              <Stormy />
+              <Rainy position={'fivehundred_zero_eleven_rainy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_c'}/>
             </Fragment>
           );
         case 210:
         case 211:
           return (
             <Fragment>
-              <Stormy />
-              <Stormy />
+              <Stormy position={'fivehundred_zero_eleven_stormy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_a'} />
             </Fragment>
           );
         case 212:
@@ -150,52 +150,52 @@ const WeaderGlobalState = ({children}) => {
         case 232:
           return (
             <Fragment>
-              <Rainy />
-              <Stormy />
-              <Stormy />
-              <Rainy />
-              <Stormy />
+              <Rainy position={'fivehundred_zero_eleven_rainy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_b'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_a'}/>
+              <Rainy position={'fivehundred_zero_eleven_rainy_c'}/>
+              <Stormy position={'fivehundred_zero_eleven_stormy_c'}/>
             </Fragment>
           );
         case 600:
         case 601:
-          return <Snowy />;
+          return <Snowy position={'fivehundred_zero_eleven_snowy_a'}/>;
         case 602:
         case 611:
         case 612:
         case 613:
           return (
             <Fragment>
-              <Snowy />
-              <Snowy />
+              <Snowy position={'fivehundred_zero_eleven_snowy_a'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_b'}/>
             </Fragment>
           );
   
         case 615:
           return (
             <Fragment>
-              <Snowy />
-              <Snowy />
-              <Rainy />
+              <Snowy position={'fivehundred_zero_eleven_snowy_a'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_b'}/>
+              <Rainy position={'fivehundred_zero_eleven_stormy_a'}/>
             </Fragment>
           );
         case 616:
         case 620:
           return (
             <Fragment>
-              <Snowy />
-              <Snowy />
-              <Snowy />
+              <Snowy position={'fivehundred_zero_eleven_snowy_a'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_b'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_c'}/>
             </Fragment>
           );
         case 621:
         case 622:
           return (
             <Fragment>
-              <Snowy />
-              <Snowy />
-              <Snowy />
-              <Snowy />
+              <Snowy position={'fivehundred_zero_eleven_snowy_a'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_b'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_c'}/>
+              <Snowy position={'fivehundred_zero_eleven_snowy_d'}/>
             </Fragment>
           );
         case 701:
@@ -214,7 +214,6 @@ const WeaderGlobalState = ({children}) => {
           return weatherPlace.weather[0].description;
       }
     };
-    console.log(localTime)
   return (
     <weatherContext.Provider
       value={{

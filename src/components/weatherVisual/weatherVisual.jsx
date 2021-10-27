@@ -1,19 +1,19 @@
 import React from "react";
 
-export const Cloudy = () => {
-  return <div className="cloudy"></div>;
+export const Cloudy = ({position}) => {
+  return <div className={`cloudy ${position}`}></div>;
 };
-export const CloudyDark = () => {
-  return <div className="cloudy cloud_dark"></div>;
+export const CloudyDark = ({position}) => {
+  return <div className={`cloudy cloud_dark ${position}`}></div>;
 };
-export const Rainy = () => {
-  return <div className="rainy"></div>;
+export const Rainy = ({position}) => {
+  return <div className={`rainy ${position}`}></div>;
 };
-export const Stormy = () => {
-  return <div className="stormy"></div>;
+export const Stormy = ({position}) => {
+  return <div className={`stormy ${position}`}></div>;
 };
-export const Snowy = () => {
-  return <div className="snowy"></div>;
+export const Snowy = ({position}) => {
+  return <div className={`snowy ${position}`}></div>;
 };
 export const Mist = () => {
     return <div className="mist"></div>;
