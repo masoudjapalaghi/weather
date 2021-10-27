@@ -149,6 +149,12 @@ body {
 }
 .weather_information .location_cart h1 {
   text-shadow: -2px -2px #ffffff, 1px 1px #b8b9be;
+  white-space: nowrap;
+
+}
+.weather_information .location_cart img{
+  position: absolute;
+  right: -15px;
 }
 .weather_information .description {
   font-size: 0.8em;

@@ -42,12 +42,12 @@ function Weather() {
                   </div>
                   <div className="weather_information">
                     <div className="location_cart">
-                      <h1>{weatherPlace.name}</h1>
                       <Flag
                         code={weatherPlace.sys.country}
                         height="10"
                         width="18"
                       />
+                      <h1>{weatherPlace.name}</h1>
                     </div>
                     <h2 className="description">
                       {weatherPlace.weather[0].description}
