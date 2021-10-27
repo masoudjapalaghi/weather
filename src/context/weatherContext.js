@@ -11,7 +11,7 @@ const weatherContext = createContext({
   setLocalTime: () => {},
   weatherPlace:'',
   setWeatherPlace: () => {},
-  clock: () => {},
+  timeLocation: () => {},
   handleGetLocalTime: () => {},
   handleGetWeather: () => {},
   handleDifrentMode: () => {},

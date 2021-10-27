@@ -13,17 +13,10 @@ const WeaderGlobalState = ({children}) => {
     const [localTime, setLocalTime] = useState();
     const [network, setNetwork] = useState("online");
     const [weatherPlace, setWeatherPlace] = useState();
-    const clock = () => {
-      var local = new Date();
-      var hour = local.getHours();
-      var minute = local.getMinutes();
-      if (minute < 10) {
-        minute = `0${minute}`;
-      }
-      if (hour < 10) {
-        hour = `0${hour}`;
-      }
-      setTime(`${hour}:${minute}`);
+    const timeLocation = () => {
+     const currentTime= localTime.current_time;
+     var times = currentTime.slice(0, 5);
+      setTime(times);
     };
     const handleGetLocalTime = async () => {
       if (network === "online") {
@@ -62,9 +55,7 @@ const WeaderGlobalState = ({children}) => {
         });
       }
     };
-  
     useEffect(() => {
-      clock();
       handleGetLocalTime();
       window.addEventListener("offline", function (e) {
         setNetwork("offline");
@@ -75,6 +66,7 @@ const WeaderGlobalState = ({children}) => {
     }, []);
     useEffect(() => {
       if (!isEmpty(localTime)) {
+        timeLocation();
         handleGetWeather(localTime.location.city);
       }
     }, [localTime]);
@@ -222,6 +214,7 @@ const WeaderGlobalState = ({children}) => {
           return weatherPlace.weather[0].description;
       }
     };
+    console.log(localTime)
   return (
     <weatherContext.Provider
       value={{
@@ -235,7 +228,7 @@ const WeaderGlobalState = ({children}) => {
         setLocalTime,
         weatherPlace,
         setWeatherPlace,
-        clock,
+        timeLocation,
         handleGetLocalTime,
         handleGetWeather,
         handleDifrentMode
