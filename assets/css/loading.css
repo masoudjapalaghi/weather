@@ -1,0 +1,67 @@
+.loading {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f8f828;
+  backdrop-filter: blur(5px);
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+.weather_loading {
+  position: relative;
+  width: 250px;
+  margin-bottom: 70px;
+}
+.weather_loading img {
+  width: 130px;
+  height: 130px;
+}
+.weather_loading img[alt="SUN"] {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  animation: sun 1s infinite ease-in-out;
+}
+@keyframes sun {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.weather_loading img[alt="MOON"] {
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 180px;
+  animation: moon 1s infinite ease-in-out;
+  transform: scale(0);
+}
+@keyframes moon {
+  from {
+    transform:scale(0) translateX(0px);
+  }
+  to {
+    transform:scale(1) translateX(50px);
+  }
+}
+.weather_loading img[alt="CLOUDY"] {
+  position: absolute;
+  top: 45px;
+  left: 40px;
+  width: 110px;
+  height: 110px;
+}
+.weather_loading img[alt="SNOW"] {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+ 
+  
+}
