@@ -6,10 +6,10 @@ const Loading = () => {
     promiseInProgress && (
     <div className="loading">
       <div className="weather_loading">
-        <img src="/images/icons/day.svg" alt="SUN" />
-        <img src="/images/icons/night.svg" alt="MOON" />
-        <img src="/images/icons/cloudy.svg" alt="CLOUDY" />
-        <img src="/images/icons/snowy-6.svg" alt="SNOW" />
+        <img src="images/icons/day.svg" alt="SUN" />
+        <img src="images/icons/night.svg" alt="MOON" />
+        <img src="images/icons/cloudy.svg" alt="CLOUDY" />
+        <img src="images/icons/snowy-6.svg" alt="SNOW" />
       </div>
     </div>
       )
